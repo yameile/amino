@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阿米濃 經典好味・港式蘿蔔糕 | 亞美食品</title>
+  <!-- Google Fonts: Noto Serif TC 與 Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#CE2623',
+              crimson: '#9E1C1A',
+              gold: '#E5A93C',
+              lightgold: '#F5D382',
+              cream: '#FFFDF9',
+              bg: '#FAF7F2',
+              border: '#E8DEC8'
+            }
+          },
+          fontFamily: {
+            serif: ['"Noto Serif TC"', 'serif'],
+            sans: ['"Noto Sans TC"', 'sans-serif'],
+          },
+          boxShadow: {
+            'card': '0 8px 24px -4px rgba(158, 28, 26, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.04)',
+            'gold-glow': '0 0 20px rgba(229, 169, 60, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 質感傳統暗紋底紙 */
+    .traditional-pattern {
+      background-color: #FAF7F2;
+      background-image: radial-gradient(#dfd4bf 0.75px, transparent 0.75px), radial-gradient(#dfd4bf 0.75px, #FAF7F2 0.75px);
+      background-size: 28px 28px;
+      background-position: 0 0, 14px 14px;
+    }
+    .red-gradient {
+      background: linear-gradient(145deg, #CE2623 0%, #B21F1C 55%, #8B1412 100%);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFE8A3 0%, #F5C058 60%, #DF9B28 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .smooth-transition {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="bg-brand-cream text-stone-900 font-sans antialiased overflow-x-hidden">
+
+  <!-- ==================== 頂部浮動標頭導航 (極致純透明毛玻璃) ==================== -->
+  <header class="sticky top-0 z-40 bg-[#9E1C1A]/85 backdrop-blur-md shadow-sm border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between">
+      <a href="#about" class="flex items-center space-x-2 sm:space-x-3 shrink-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gradient-to-b from-amber-200 via-brand-gold to-amber-500 p-[1.5px] shadow-md shrink-0">
+          <div class="w-full h-full rounded-full bg-brand-crimson flex items-center justify-center border border-amber-200/40">
+            <span class="font-serif font-black text-amber-200 text-[10px] sm:text-xs leading-[1.1] select-none [writing-mode:vertical-rl] tracking-tighter drop-shadow-sm">
+              あみの
+            </span>
+          </div>
+        </div>
+        <div>
+          <span class="font-serif font-black text-xl sm:text-2xl tracking-wider text-amber-200 block leading-none drop-shadow">阿米濃</span>
+          <span class="text-[10px] tracking-widest text-amber-100/80 hidden sm:block mt-0.5 drop-shadow-sm">港式蘿蔔糕．經典好味</span>
+        </div>
+      </a>
+      <nav class="flex items-center space-x-1 sm:space-x-3 text-xs sm:text-sm font-medium">
+        <a href="#about" class="px-1.5 py-1 sm:px-3 rounded text-amber-100 hover:text-amber-300 transition drop-shadow-sm">品牌初心</a>
+        <a href="#products" class="px-1.5 py-1 sm:px-3 rounded text-amber-100 hover:text-amber-300 transition drop-shadow-sm">經典口味</a>
+        <a href="#ordering" class="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-brand-gold text-brand-crimson font-bold hover:bg-yellow-300 transition shadow">線上填單</a>
+        <a href="#contact" class="px-1.5 py-1 sm:px-3 rounded text-amber-100 hover:text-amber-300 transition drop-shadow-sm">運費須知</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== 【第一段：品牌故事與產品簡介 (About)】 ==================== -->
+  <section id="about" class="relative red-gradient text-white py-14 sm:py-20 overflow-hidden border-b-4 border-brand-gold">
+    <!-- 包裝禮盒麥穗裝飾 (SVG 背景裝飾) -->
+    <div class="absolute -right-10 bottom-0 opacity-15 pointer-events-none text-brand-gold select-none">
+      <i class="fa-solid fa-wheat-awn text-[220px]"></i>
+    </div>
+    <div class="absolute -left-10 top-0 opacity-10 pointer-events-none text-brand-gold select-none">
+      <i class="fa-solid fa-wheat-awn text-[180px] rotate-45"></i>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+      
+      <!-- 阿米濃 經典紅金徽章 -->
+      <div class="inline-block p-4 sm:p-5 rounded-3xl bg-amber-50/95 shadow-2xl border-2 border-brand-lightgold mb-6 backdrop-blur-sm max-w-sm sm:max-w-md w-full">
+        <div class="flex items-center justify-center">
+          <svg class="w-full h-auto max-h-16 text-stone-900" viewBox="0 0 240 70" fill="currentColor">
+            <g transform="translate(10, 36) scale(0.9)">
+              <rect x="0" y="0" width="16" height="16" fill="none" stroke="#CE2623" stroke-width="2.2" rx="2"/>
+              <line x1="8" y1="0" x2="8" y2="16" stroke="#CE2623" stroke-width="2"/>
+              <line x1="0" y1="8" x2="16" y2="8" stroke="#CE2623" stroke-width="2"/>
+              <path d="M4,0 C4,-5 8,-5 8,0 C8,-5 12,-5 12,0" fill="none" stroke="#CE2623" stroke-width="2"/>
+            </g>
+            <text x="32" y="44" font-family="'Noto Serif TC', serif" font-weight="900" font-size="36" letter-spacing="1">阿米濃</text>
+            <path d="M 32,54 Q 75,62 135,46 Q 165,38 180,48 Q 115,64 32,54 Z" fill="#1C1917" />
+            <g transform="translate(190, 14)">
+              <ellipse cx="14" cy="20" rx="13" ry="19" fill="#CE2623" stroke="#F5D382" stroke-width="1.2"/>
+              <text x="14" y="16" font-family="'Noto Serif TC', serif" font-size="9" font-weight="700" fill="#FFFDF9" text-anchor="middle">經典</text>
+              <text x="14" y="27" font-family="'Noto Serif TC', serif" font-size="9" font-weight="700" fill="#FFFDF9" text-anchor="middle">好味</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 主標題 -->
+      <div class="inline-block px-4 py-1 rounded-full bg-black/25 border border-brand-gold/50 text-brand-lightgold text-xs sm:text-sm font-medium tracking-widest mb-3">
+        港式口感・入口即化・真材實料
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-black tracking-wide leading-tight mb-4">
+        <span class="gold-gradient-text">尋回記憶裡最純粹的米香</span>
+      </h1>
+
+      <!-- 精簡品牌引言 -->
+      <div class="max-w-2xl mx-auto text-amber-50/95 leading-relaxed text-sm sm:text-base font-light mb-8">
+        <p>
+          嚴選優質在來米，以細緻炊蒸工藝鎖住天然回甘與米香底韻。從晨光早餐到圍爐餐桌，阿米濃用心為您呈現真材實料的純粹溫度。
+        </p>
+      </div>
+
+      <!-- 三大品牌特色卡片 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-left">
+        <div class="bg-black/25 backdrop-blur-sm border border-brand-gold/40 rounded-2xl p-5 hover:border-brand-gold smooth-transition shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <span class="w-8 h-8 rounded-full bg-brand-gold text-brand-crimson flex items-center justify-center font-serif font-black text-sm shadow">1</span>
+              <h3 class="font-serif font-bold text-base text-amber-200">黃金比例外酥內嫩</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-amber-50/90 leading-relaxed">
+              堅持傳統黃金比例工藝，糕體綿密軟糯，熱鍋香煎外酥內嫩。
+            </p>
+          </div>
+          <span class="text-[11px] text-brand-lightgold/80 mt-3 pt-2 border-t border-white/10 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> 黃金古法配方
+          </span>
+        </div>
+
+        <div class="bg-black/25 backdrop-blur-sm border border-brand-gold/40 rounded-2xl p-5 hover:border-brand-gold smooth-transition shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <span class="w-8 h-8 rounded-full bg-brand-gold text-brand-crimson flex items-center justify-center font-serif font-black text-sm shadow">2</span>
+              <h3 class="font-serif font-bold text-base text-amber-200">嚴選在地真材實料</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-amber-50/90 leading-relaxed">
+              嚴選櫻花蝦、香濃芋頭、經典臘味與優質蕈菇，吃得到真材實料。
+            </p>
+          </div>
+          <span class="text-[11px] text-brand-lightgold/80 mt-3 pt-2 border-t border-white/10 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> 在地飽滿原味
+          </span>
+        </div>
+
+        <div class="bg-black/25 backdrop-blur-sm border border-brand-gold/40 rounded-2xl p-5 hover:border-brand-gold smooth-transition shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-2">
+              <span class="w-8 h-8 rounded-full bg-brand-gold text-brand-crimson flex items-center justify-center font-serif font-black text-sm shadow">3</span>
+              <h3 class="font-serif font-bold text-base text-amber-200">急速保鮮分片快煎</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-amber-50/90 leading-relaxed">
+              出爐自然甘甜，每包預切10片免動刀，輕鬆快速上桌。
+            </p>
+          </div>
+          <span class="text-[11px] text-brand-lightgold/80 mt-3 pt-2 border-t border-white/10 flex items-center gap-1">
+            <i class="fa-solid fa-check"></i> 每包分切 10 片裝
+          </span>
+        </div>
+      </div>
+
+      <!-- 快速行動按鈕 -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="#products" class="w-full sm:w-auto px-7 py-3 rounded-full bg-brand-gold text-brand-crimson font-serif font-bold text-sm shadow-gold-glow hover:bg-yellow-300 smooth-transition flex items-center justify-center space-x-2">
+          <span>瀏覽 6 款招牌口味與價格</span>
+          <i class="fa-solid fa-arrow-down text-xs"></i>
+        </a>
+        <a href="#ordering" class="w-full sm:w-auto px-7 py-3 rounded-full border border-brand-gold/80 text-amber-100 hover:bg-white/10 hover:text-white font-serif font-bold text-sm smooth-transition flex items-center justify-center space-x-2">
+          <i class="fa-solid fa-file-pen text-xs"></i>
+          <span>前往線上訂購表單</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 【第二段：6種經典口味展示與價格 (Products)】 ==================== -->
+  <section id="products" class="scroll-mt-20 py-16 sm:py-24 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-12 sm:mb-16">
+      <span class="text-xs font-bold tracking-widest text-brand-red uppercase bg-red-100 px-3 py-1 rounded-full">Classic Flavors</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-crimson mt-3">阿米濃經典六大風味</h2>
+      <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+      <p class="text-sm sm:text-base text-gray-600 mt-3">每包約 1000g ± 5%（貼心預切 10 片裝）．-18°C 急速冷凍封存</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- 1. 原味阿米濃 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col group">
+        <div class="relative w-full h-64 bg-stone-100 overflow-hidden">
+          <img src="images/1原味阿米濃.jpg"             
+               alt="原味阿米濃" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+               onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1mV4PghgJGk5Pqu3cMPHZgy-tTRMVcXpl';">
+          <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">經典招牌</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-brand-red mb-1">#經典招牌 #初心原味 #老饕必備</div>
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">原味阿米濃</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              白蘿蔔刨絲釋放天然甘甜，交織蝦米鮮香與台灣豬肉油香。熱鍋香煎外酥內嫩，層次細緻分明。
+            </p>
+           <!-- 過敏原警示 -->
+            <div class="mt-3.5 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50/90 border border-amber-200/60 text-[11px] text-amber-900/80">
+              <i class="fa-solid fa-triangle-exclamation text-amber-600 text-xs shrink-0"></i>
+              <span><strong>過敏原資訊：</strong>本產品含小麥、芝麻、蝦類及其製品，不適合其過敏體質食用。</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <div class="text-xl font-black text-brand-red">特惠價 NT$ 150<span class="text-xs text-gray-500 font-normal"> /條</span></div>            
+            <div class="text-l text-gray-900">原價 NT$ 200<span class="text-xs text-gray-500 font-normal"> /條</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 彩頭宴將 (臘味) -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col group">
+        <div class="relative w-full h-64 bg-stone-100 overflow-hidden">
+          <img src="images/2彩頭宴將.jpg" 
+               alt="彩頭宴將 (臘味)" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 left-3 bg-red-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">茶樓名饌</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-brand-red mb-1">#茶樓名饌 #醇厚臘香 #宴席級奢華</div>
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">彩頭宴將（臘味）</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              特調港式臘味油潤透亮、鹹甜甘香，與白蘿蔔絲完美揉合，每一口都脂香四溢，在家輕鬆享用星級奢華。
+            </p>
+            <!-- 過敏原警示 -->
+            <div class="mt-3.5 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50/90 border border-amber-200/60 text-[11px] text-amber-900/80">
+              <i class="fa-solid fa-triangle-exclamation text-amber-600 text-xs shrink-0"></i>
+              <span><strong>過敏原資訊：</strong>本產品含小麥、芝麻、蝦類、乳糖及其製品，不適合其過敏體質食用。</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <div class="text-xl font-black text-brand-red">特惠價 NT$ 180<span class="text-xs text-gray-500 font-normal"> /條</span></div>            
+            <div class="text-l text-gray-900">原價 NT$ 250<span class="text-xs text-gray-500 font-normal"> /條</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 櫻花米濃 (櫻花蝦) -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col group">
+        <div class="relative w-full h-64 bg-stone-100 overflow-hidden">
+          <img src="images/3櫻花米濃.jpg" 
+               alt="櫻花米濃 (櫻花蝦)" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 left-3 bg-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">嚴選珍味</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-pink-700 mb-1">#嚴選珍味 #大海鮮脆 #真材實料看得見</div>
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">櫻花米濃（櫻花蝦）</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              不惜成本鋪滿新鮮櫻花蝦！下鍋滋滋作響時鮮香撲鼻，嚼得出大海的鮮脆回甘。
+            </p>
+            <!-- 過敏原警示 -->
+            <div class="mt-3.5 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50/90 border border-amber-200/60 text-[11px] text-amber-900/80">
+              <i class="fa-solid fa-triangle-exclamation text-amber-600 text-xs shrink-0"></i>
+              <span><strong>過敏原資訊：</strong>本產品含小麥、芝麻、蝦類及其製品，不適合其過敏體質食用。</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <div class="text-xl font-black text-brand-red">特惠價 NT$ 150<span class="text-xs text-gray-500 font-normal"> /條</span></div>            
+            <div class="text-l text-gray-900">原價 NT$ 200<span class="text-xs text-gray-500 font-normal"> /條</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 芋香米濃 (芋頭) -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col group">
+        <div class="relative w-full h-64 bg-stone-100 overflow-hidden">
+          <img src="images/6芋香米濃.jpg" 
+               alt="芋香米濃 (芋頭)" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">芋頭控必收</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-purple-700 mb-1">#芋頭控必收 #獨門特調 #鬆綿軟糯</div>
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">芋香米濃（芋頭糕）</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              嚴選質地鬆軟的特選芋頭融入在來米漿，咬得到厚實芋頭顆粒，米香與芋香在舌尖曼妙迸發。
+            </p>
+            <!-- 過敏原警示 -->
+            <div class="mt-3.5 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50/90 border border-amber-200/60 text-[11px] text-amber-900/80">
+              <i class="fa-solid fa-triangle-exclamation text-amber-600 text-xs shrink-0"></i>
+              <span><strong>過敏原資訊：</strong>本產品含小麥、芝麻、蝦類及其製品，不適合其過敏體質食用。</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <div class="text-xl font-black text-brand-red">特惠價 NT$ 180<span class="text-xs text-gray-500 font-normal"> /條</span></div>            
+            <div class="text-l text-gray-900">原價 NT$ 250<span class="text-xs text-gray-500 font-normal"> /條</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. 紅彩蔬食 (蔬食．無五辛) -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col group">
+        <div class="relative w-full h-64 bg-stone-100 overflow-hidden">
+          <img src="images/4紅彩蔬食.jpg" 
+               alt="紅彩蔬食 (蔬食．無五辛)" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">蔬食．無五辛</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-emerald-700 mb-1">#蔬食首選 #無五辛配方 #純淨甘甜</div>
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">紅彩蔬食（無五辛）</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              回歸大自然的純真，嚴選鮮採白蘿蔔絲與純淨米漿。無蔥蒜五辛、無動物成分，熱愛蔬食的朋友盡情享用。
+            </p>
+            <!-- 過敏原警示 -->
+            <div class="mt-3.5 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50/90 border border-amber-200/60 text-[11px] text-amber-900/80">
+              <i class="fa-solid fa-triangle-exclamation text-amber-600 text-xs shrink-0"></i>
+              <span><strong>過敏原資訊：</strong>本產品含小麥、芝麻、花生及其製品，不適合其過敏體質食用。</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <div class="text-xl font-black text-brand-red">特惠價 NT$ 120<span class="text-xs text-gray-500 font-normal"> /條</span></div>            
+            <div class="text-l text-gray-900">原價 NT$ 150<span class="text-xs text-gray-500 font-normal"> /條</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. 鄉菇蔬食 (蔬食．無五辛) -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col group">
+        <div class="relative w-full h-64 bg-stone-100 overflow-hidden">
+          <img src="images/5鄉菇蔬食.jpg" 
+               alt="鄉菇蔬食 (蔬食．無五辛)" 
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 left-3 bg-amber-700 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">蔬食．濃郁蕈香</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-amber-800 mb-1">#濃郁蕈香 #蔬食升級 #厚肉香菇入料</div>
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">鄉菇蔬食（無五辛）</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              精選厚肉香菇煸出陣陣濃郁蕈香，風味深邃而內斂，口口清雅甘醇，蔬食愛好者的飽滿驚喜。
+            </p>
+            <!-- 過敏原警示 -->
+            <div class="mt-3.5 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50/90 border border-amber-200/60 text-[11px] text-amber-900/80">
+              <i class="fa-solid fa-triangle-exclamation text-amber-600 text-xs shrink-0"></i>
+              <span><strong>過敏原資訊：</strong>本產品含小麥、芝麻、花生及其製品，不適合其過敏體質食用。</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <div class="text-xl font-black text-brand-red">特惠價 NT$ 150<span class="text-xs text-gray-500 font-normal"> /條</span></div>            
+            <div class="text-l text-gray-900">原價 NT$ 200<span class="text-xs text-gray-500 font-normal"> /條</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 填單指引橫幅 -->
+    <div class="mt-12 bg-amber-50 rounded-2xl p-6 sm:p-8 text-center border border-amber-200">
+      <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-crimson">挑選好喜愛的口味了嗎？</h3>
+      <p class="text-sm text-gray-600 mt-2 mb-4">請繼續往下滑動至下方表單填寫訂購數量</p>
+      <a href="#ordering" class="inline-flex items-center px-6 py-2.5 rounded-full bg-brand-crimson text-white font-bold hover:bg-brand-red transition shadow-md">
+        前往線上訂購單 ↓
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== 【第三段：Google 訂購表單嵌入區 (Ordering)】 ==================== -->
+  <section id="ordering" class="scroll-mt-16 py-12 sm:py-20 bg-stone-100 border-t border-stone-200 px-3 sm:px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <span class="text-xs font-bold tracking-widest text-brand-red uppercase bg-red-100 px-3 py-1 rounded-full">Online Order</span>
+        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-crimson mt-2">線上預訂單</h2>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 relative" style="-webkit-overflow-scrolling: touch;">
+        <div class="w-full bg-white -mb-16">
+          <iframe id="google-iframe"
+                  src="https://docs.google.com/forms/d/e/1FAIpQLScm8mHDUbeN9ohUi1Ez6Y7EZkmfTUTsXGAfHnT_tkeiHbTx8A/viewform?embedded=true" 
+                  class="w-full border-0 block" 
+                  style="min-height: 3600px; height: 3600px;" 
+                  scrolling="auto" 
+                  frameborder="0" 
+                  marginheight="0" 
+                  marginwidth="0">載入中…</iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 【第四段：公司資訊、服務時間與運費政策 (Footer)】 ==================== -->
+  <footer id="contact" class="scroll-mt-16 bg-stone-900 text-stone-300 border-t-4 border-brand-gold pt-14 pb-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <!-- 頂部三大重點政策卡片 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pb-12 border-b border-stone-800">
+        
+        <!-- 1. 運費資訊 -->
+        <div class="bg-stone-800/80 p-5 rounded-2xl border border-stone-700/80">
+          <div class="flex items-center space-x-3 text-brand-gold mb-2">
+            <i class="fa-solid fa-truck-fast text-xl"></i>
+            <h4 class="font-serif font-bold text-white text-base">低溫運費規則</h4>
+          </div>
+          <div class="space-y-1 text-sm text-stone-300">
+            <p class="text-brand-gold font-bold">● 單一地址滿 NT$ 3,000 元即享免運</p>
+            <p>● 未滿 NT$ 3,000 元，每筆酌收 <span class="text-amber-300 font-semibold">NT$ 300 元</span> 低溫運費，<span class="text-amber-300 font-semibold">離島及偏遠地區運費另計</span></p>
+            <p class="text-xs text-stone-400 mt-2">全程低溫冷凍配送確保品質。</p>
+          </div>
+        </div>
+
+        <!-- 2. 服務時間 -->
+        <div class="bg-stone-800/80 p-5 rounded-2xl border border-stone-700/80">
+          <div class="flex items-center space-x-3 text-brand-gold mb-2">
+            <i class="fa-regular fa-clock text-xl"></i>
+            <h4 class="font-serif font-bold text-white text-base">客服服務時間</h4>
+          </div>
+          <div class="space-y-1 text-sm text-stone-300">
+            <p class="text-white font-medium">每週一至週五：<span class="text-amber-300 font-bold">09:00 ～ 16:00</span></p>
+            <p class="text-stone-400">例假日及國定假日暫停客服與出貨服務。</p>
+            <p class="text-xs text-stone-400 mt-2">歡迎於服務時間內來電洽詢訂購進度。</p>
+          </div>
+        </div>
+
+        <!-- 3. 製造廠商資訊 -->
+        <div class="bg-stone-800/80 p-5 rounded-2xl border border-stone-700/80">
+          <div class="flex items-center space-x-3 text-brand-gold mb-2">
+            <i class="fa-solid fa-building text-xl"></i>
+            <h4 class="font-serif font-bold text-white text-base">製造公司資訊</h4>
+          </div>
+          <div class="space-y-1 text-xs sm:text-sm text-stone-300">
+            <p class="font-bold text-white">亞美食品有限公司</p>
+            <p><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i>新北市土城區承天路71巷4弄3號</p>
+            <p><i class="fa-solid fa-phone text-amber-500 mr-1.5"></i>電話：02-2269-3377</p>
+            <p><i class="fa-solid fa-fax text-amber-500 mr-1.5"></i>傳真：02-2268-2699</p>
+            <p><i class="fa-solid fa-industry text-amber-500 mr-1.5"></i>食品業者登錄字號：F-180016068-00000-2</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 下半段：版權、責任險 (無背景強化) 與返回頁首 -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-stone-400 gap-4">
+        
+        <!-- 左側：標誌與客服信箱 -->
+        <div class="flex items-center space-x-3 shrink-0">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-b from-amber-200 via-brand-gold to-amber-500 p-[1px] shadow-sm shrink-0">
+            <div class="w-full h-full rounded-full bg-brand-crimson flex items-center justify-center">
+              <span class="font-serif font-black text-amber-200 text-[9px] [writing-mode:vertical-rl] tracking-tighter">
+                あみの
+              </span>
+            </div>
+          </div>
+          <span>客服信箱：service@yameile.com.tw</span>
+        </div>
+
+        <!-- 中間：版權宣告與自然融入的責任險說明 -->
+        <div class="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-4 text-center">
+          <p>© 2026 亞美食品有限公司 YAMEILE CO., LTD. All Rights Reserved.</p>
+          <span class="hidden sm:inline text-stone-600">|</span>
+          <p class="text-stone-400">本網站產品已投保南山產物產品責任保險NT$20,000,000元。(保單號碼：22A0056478)</p>
+        </div>
+
+        <!-- 右側：返回頁首按鈕 -->
+        <a href="#about" class="shrink-0 px-3 py-1.5 rounded-full bg-stone-800 hover:bg-brand-red text-stone-300 hover:text-white transition flex items-center space-x-1 border border-stone-700">
+          <i class="fa-solid fa-arrow-up text-xs"></i>
+          <span>返回頁首</span>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== 頁面換頁平滑滾動至訂購單頂部腳本 ==================== -->
+  <script>
+    (function() {
+      let loadCount = 0;
+      const iframe = document.getElementById('google-iframe');
+      const orderSection = document.getElementById('ordering');
+
+      if (iframe && orderSection) {
+        iframe.addEventListener('load', function() {
+          loadCount++;
+          if (loadCount > 1) {
+            orderSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
